@@ -3,7 +3,7 @@
 class Command():
     def __init__(self):
         self.commands = dict()
-        self.start_up = Command._start_up_stab
+        self.start_up = Command._start_up_stub
         self.clean_up = Command._clean_up_stub
         self.welcome_message = ''
         self.help = 'HELP: command  [options...]         DESCRIPTION\n\n' + \
@@ -11,7 +11,7 @@ class Command():
                     'quit                                quit todo\n'
 
     @staticmethod
-    def _start_up_stab():
+    def _start_up_stub():
         pass
 
     @staticmethod
