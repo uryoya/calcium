@@ -5,6 +5,7 @@ class Command():
         self.commands = dict()
         self.start_up = Command._start_up_stub
         self.clean_up = Command._clean_up_stub
+        self.prompt = '> '
         self.welcome_message = ''
         self.help = 'HELP: command  [options...]         DESCRIPTION\n\n' + \
                     'help                                show this message\n' + \
@@ -68,7 +69,7 @@ class Command():
             print(self.welcome_message)
 
         while True:
-            command, *args = input('> ').split(' ')
+            command, *args = input(self.prompt).split(' ')
             try:
                 func, options = self.commands[command]
                 if 'args' not in options:
