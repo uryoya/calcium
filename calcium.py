@@ -1,10 +1,10 @@
 """Interactive shell framework."""
 
-class Command():
+class Calcium():
     def __init__(self):
         self.commands = dict()
-        self.start_up = Command._start_up_stub
-        self.clean_up = Command._clean_up_stub
+        self.start_up = Calcium._start_up_stub
+        self.clean_up = Calcium._clean_up_stub
         self.prompt = '> '
         self.welcome_message = ''
         self.help = 'HELP: command  [options...]         DESCRIPTION\n\n' + \
