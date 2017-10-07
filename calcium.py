@@ -32,6 +32,8 @@ class Command():
 
     def add_command(self, command, func, **options):
         self.commands[command] = (func, options)
+
+    def add_help(self, command, **options):
         if 'args' in options:
             self.help += '{:<15}{:<21}'.format(
                 command,
@@ -56,6 +58,7 @@ class Command():
         """
         def decorator(func):
             self.add_command(command, func, **options)
+            self.add_help(command, **options)
             return func
         return decorator
 
