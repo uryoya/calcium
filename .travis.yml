@@ -2,10 +2,14 @@ language: python
 sudo: required
 
 python:
-  - "3.4"
-  - "3.5"
-  - "3.6"
-  - "nightly"
+    - "3.4"
+    - "3.5"
+    - "3.6"
+    - "nightly"
 
-install: true
+install:
+    - apt update && apt upgrade
+
+script:
+    - python setup.py test
 
